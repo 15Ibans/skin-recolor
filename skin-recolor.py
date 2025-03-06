@@ -54,9 +54,7 @@ def get_recolored_skin_data(color):
     """
     Gets the data of a recolored skin of the specified color
 
-    :param r: Red value
-    :param g: Green value
-    :param b: Blue value
+    :param color: Color represented as a number
     :return: numpy array representing the colored skin
     """
     img = Image.open("base.png")
