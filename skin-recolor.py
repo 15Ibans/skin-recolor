@@ -45,34 +45,9 @@ def save_skin_data_to_file(skin: Skin, file_name=None):
 
 
 def get_random_recolored_skin_data():
-    color = random.randrange(0, 2 ** 24)
+    color = random.randrange(0, 2**24)
 
     return get_recolored_skin_data(color)
-
-
-# def random_color():
-#     if not os.path.exists("random_skins"):
-#         os.mkdir("random_skins")
-
-#     save_dir = os.path.curdir + "/random_skins/"
-
-#     amount = int(input("Enter number of random skins to make: "))
-
-#     img = Image.open("base.png")
-#     img = img.convert("RGBA")
-
-#     for i in range(amount):
-#         rgb = [random.randrange(0, 255), random.randrange(0, 255), random.randrange(0, 255)]
-
-#         name = rgb2hex(rgb[0], rgb[1], rgb[2])
-
-#         data = np.array(img)
-#         change_color(data, rgb)
-
-#         img2 = Image.fromarray(data)
-#         img2.save(save_dir + name + ".png")
-#         print("Saved as {}.png".format(name))
-
 
 
 def get_recolored_skin_data(color):
